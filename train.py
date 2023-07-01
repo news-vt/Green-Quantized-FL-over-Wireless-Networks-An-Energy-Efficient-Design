@@ -77,8 +77,6 @@ def main(args):
 
     if args.model == "Base_CNN":
         model = CNN_model.Base_CNN(n_bit= args.n_bit).to(device)
-    else:
-        model = CNN_model.CNN_simple(n_bit = args.n_bit).to(device)
 
     trainer = Simulator(args, logger, local_tr_data_loaders, local_te_data_loaders, device)
     trainer.initialization(copy.deepcopy(model))

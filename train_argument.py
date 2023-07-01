@@ -3,7 +3,7 @@ import argparse
 def parser():
    #This creates the parser
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', choices=["Base_CNN", "CNN_simple"], default="Base_CNN", #This adds an argument to the parser
+    parser.add_argument('--model', choices=["Base_CNN"], default="Base_CNN", #This adds an argument to the parser
         help='Which model to use') #These arguments can be access with args.name, where args = parser.parse_args()
     parser.add_argument('--dataset', choices=['mnist'], default ='mnist')
     parser.add_argument('--data_root', default='data', 
